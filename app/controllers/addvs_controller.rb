@@ -5,6 +5,8 @@ class AddvsController < ApplicationController
   # GET /addvs.json
   def index
     @addvs = Addv.all
+    
+
   end
 
   # GET /addvs/1

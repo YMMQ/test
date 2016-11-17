@@ -2,16 +2,29 @@
 <div class="center jumbotron">
 	<h1>Search for Suitable Job App</h1>
 	<%= link_to "Sign up now!","#",class: "btn btn-lg btn-primary" %>
-
-
-
-
-
-
-
-	
 	<h2> This is the home page for the <a href="http://www.railstutorial.org/">Ruby on Rails Tutorial</a> sample application. </h2>
 	
-</div>
 
-<%= link_to image_tag("rails.png",alt: "Rails logo"),'http://rubyonrails.org/' %>
+<table class="table table-bordered table-striped">
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Organization</th>
+      <th>Image</th>
+    </tr>
+  </thead>
+
+ <tbody>
+    <% @addvs.each do |addv| %>
+      <tr>
+        <td><%= addv.title %></td>
+        <td><%= addv.organization %></td>
+        <td><%= link_to "View Add", addv.image_url %></td>
+        
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+</div>

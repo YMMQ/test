@@ -2,7 +2,7 @@
 
 <h1>Addvs</h1>
 
-<table>
+<table class="table table-bordered table-striped">
   <thead>
     <tr>
       <th>Title</th>
@@ -16,11 +16,11 @@
     <% @addvs.each do |addv| %>
       <tr>
         <td><%= addv.title %></td>
-        <td><%= addv.image %></td>
+        <td><%= link_to "View Add", addv.image_url %></td>
         <td><%= addv.organization %></td>
-        <td><%= link_to 'Show', addv %></td>
-        <td><%= link_to 'Edit', edit_addv_path(addv) %></td>
-        <td><%= link_to 'Destroy', addv, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Show', addv , class: "btn btn-primary"%></td>
+        <td><%= link_to 'Edit', edit_addv_path(addv) , class: "btn btn-primary"%></td>
+        <td><%= link_to 'Destroy', addv, method: :delete, data: { confirm: 'Are you sure?' , class: "btn btn-primary" } %></td>
       </tr>
     <% end %>
   </tbody>
