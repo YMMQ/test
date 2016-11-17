@@ -1,6 +1,11 @@
 source 'https://rubygems.org'
 
+gem 'mini_magick'
+
+gem 'carrierwave'
+gem 'rails_admin', '~> 1.1'
 gem 'bootstrap-sass', '~> 3.3', '>= 3.3.7'
+gem 'devise', '~> 4.2'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.0.0', '>= 5.0.0.1'
 # Use postgresql as the database for Active Record

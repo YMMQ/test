@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @addv.title %>
+</p>
+
+<p>
+  <strong>Image:</strong>
+  <%= @addv.image %>
+</p>
+<%= image_tag addv.image_url(:thumb) if addv.image? %>
+
+<p>
+  <strong>Organization:</strong>
+  <%= @addv.organization %>
+</p>
+
+<%= link_to 'Edit', edit_addv_path(@addv) %> |
+<%= link_to 'Back', addvs_path %>

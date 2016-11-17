@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @dtype.name %>
+</p>
+
+<p>
+  <strong>Remarks:</strong>
+  <%= @dtype.remarks %>
+</p>
+
+<%= link_to 'Edit', edit_dtype_path(@dtype) %> |
+<%= link_to 'Back', dtypes_path %>
