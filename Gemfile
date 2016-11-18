@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
-
+gem 'rambling-slider-rails', '~> 0.2.0'
 gem 'mini_magick'
-
+gem 'bootstrap_form'
 gem 'carrierwave'
 gem 'rails_admin', '~> 1.1'
 gem 'bootstrap-sass', '~> 3.3', '>= 3.3.7'

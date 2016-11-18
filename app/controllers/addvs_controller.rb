@@ -5,13 +5,20 @@ class AddvsController < ApplicationController
   # GET /addvs.json
   def index
     @addvs = Addv.all
-    
+    if params[:search]
+      @addvs = Addv.search(params[:search]).order("created_at DESC")
+    else
+      @addvs = Addv.all.order('created_at DESC')
+    end
+
 
   end
 
   # GET /addvs/1
   # GET /addvs/1.json
   def show
+    
+
   end
 
   # GET /addvs/new

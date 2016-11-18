@@ -13,7 +13,7 @@
 
   <div class="field">
     <%= f.label :dtype_id %>
-    <%= f.text_field :dtype_id %>
+    <%= f.collection_select :dtype_id, Dtype.order(:name),:id,:name,include_blank: true%>
   </div>
 
   <div class="field">

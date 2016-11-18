@@ -13,22 +13,22 @@
 
   <div class="field">
     <%= f.label :addv_id %>
-    <%= f.text_field :addv_id %>
+    <%= f.collection_select :addv_id, Addv.order(:title),:id,:title,include_blank: true%>
   </div>
 
   <div class="field">
     <%= f.label :profession_id %>
-    <%= f.text_field :profession_id %>
+    <%= f.collection_select :profession_id, Profession.order(:name),:id,:name,include_blank: true%>
   </div>
 
   <div class="field">
     <%= f.label :degree_id %>
-    <%= f.text_field :degree_id %>
+    <%= f.collection_select :degree_id, Degree.order(:name),:id,:name,include_blank: true%>
   </div>
 
   <div class="field">
     <%= f.label :city_id %>
-    <%= f.text_field :city_id %>
+    <%= f.collection_select :city_id, City.order(:name),:id,:name,include_blank: true%>
   </div>
 
   <div class="field">

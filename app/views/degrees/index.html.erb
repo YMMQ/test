@@ -14,7 +14,7 @@
   <tbody>
     <% @degrees.each do |degree| %>
       <tr>
-        <td><%= degree.dtype %></td>
+        <td><%= degree.dtype.name %></td>
         <td><%= degree.name %></td>
         <td><%= link_to 'Show', degree %></td>
         <td><%= link_to 'Edit', edit_degree_path(degree) %></td>

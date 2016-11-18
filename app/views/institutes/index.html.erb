@@ -14,7 +14,7 @@
   <tbody>
     <% @institutes.each do |institute| %>
       <tr>
-        <td><%= institute.city %></td>
+        <td><%= institute.city.name %></td>
         <td><%= institute.name %></td>
         <td><%= link_to 'Show', institute %></td>
         <td><%= link_to 'Edit', edit_institute_path(institute) %></td>

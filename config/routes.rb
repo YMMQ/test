@@ -11,6 +11,7 @@ Rails.application.routes.draw do
   resources :degrees
   resources :dtypes
   get 'static_pages/home'
+  get 'static_pages/newspaper'
   root 'static_pages#home'
   get 'static_pages/help'
 

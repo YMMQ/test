@@ -1,16 +1,23 @@
 
 <div class="center jumbotron">
+
+<h2><%= form_tag(addvs_path, :method => "get", id: "search-form") do %>
+  <%= text_field_tag :search, params[:search], placeholder: "Search Title" %>
+  <%= submit_tag "Search" %>
+<% end %></h2>
+
 	<h1>Search for Suitable Job App</h1>
 	<%= link_to "Sign up now!","#",class: "btn btn-lg btn-primary" %>
-	<h2> This is the home page for the <a href="http://www.railstutorial.org/">Ruby on Rails Tutorial</a> sample application. </h2>
+	<h2> This is. </h2>
 	
 
 <table class="table table-bordered table-striped">
   <thead>
     <tr>
-      <th>Title</th>
-      <th>Organization</th>
-      <th>Image</th>
+      <th><center>Title</center></th>
+      <th><center>Organization</center></th>      
+      <th><center>Add Date</center></th>
+      <th><center>Image</center></th>
     </tr>
   </thead>
 
@@ -18,7 +25,8 @@
     <% @addvs.each do |addv| %>
       <tr>
         <td><%= addv.title %></td>
-        <td><%= addv.organization %></td>
+        <td><%=addv.organization.name %></td>        
+        <td><%= addv.created_at.strftime("%d-%B-%Y") %></td>
         <td><%= link_to "View Add", addv.image_url %></td>
         
       </tr>
